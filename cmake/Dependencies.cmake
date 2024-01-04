@@ -137,7 +137,7 @@ endif()
 
 # ---[ Python
 if(BUILD_python)
-  if(NOT "${python_version}" VERSION_LESS "3.0.0")
+  if( "${python_version}" VERSION_LESS "3.0.0") #removed  "NOT" from here
     # use python3
     find_package(PythonInterp 3.0)
     find_package(PythonLibs 3.0)
